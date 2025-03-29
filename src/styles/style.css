@@ -1,0 +1,277 @@
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 12pt;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: default;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: 15% 1fr;
+    background-color: rgb(0, 0, 34);
+}
+
+header {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 70);
+    font-size: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 179, 0);
+    box-shadow: 2px 2px 10px black;
+    z-index: 1000;
+}
+
+aside {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: stretch;
+    background-color: rgb(0, 0, 70);
+    color: rgb(255, 179, 0);
+    padding: 50px;
+}
+
+aside li {
+    list-style-type: none;
+}
+
+aside > div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+aside > div > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    padding: 0 5px;
+}
+
+.list-item:hover {
+    cursor: pointer;
+    background-color: rgb(255, 179, 0);
+    color: rgb(0, 0, 70);
+}
+
+.icon {
+    flex: 0;
+    height: 10px;
+    width: 10px;
+    flex-basis: 10px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.todoland {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.todo-item {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px;
+    background-color: rgba(255, 179, 0, 0.755);
+    border-radius: 10px;
+}
+
+.todo-item > .text {
+    flex: 4;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.todo-item > .text > p {
+    flex: 9;
+}
+
+.actions {
+    flex: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1rem;
+    flex-basis: 1rem;
+    text-align: center;
+}
+
+.actions>div {
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 70);
+    visibility: hidden;
+}
+
+.actions>div:hover {
+    background-color: rgb(0, 0, 70);
+    color: rgb(255, 179, 0);
+    cursor: pointer;
+}
+
+.todo-item:hover .actions>div {
+    visibility: visible;
+}
+
+.footer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.7rem;
+}
+
+.project {
+    margin-right: auto;
+}
+
+.footer > div {
+    padding: 0 10px;
+    width: fit-content;
+    border: 1px solid rgb(0, 0, 70);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+
+.add-button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: orange;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.425);
+    cursor: pointer;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.475);
+}
+
+::backdrop {
+    backdrop-filter: blur(5px);
+    background-color: rgba(85, 85, 85, 0.243);
+}
+
+dialog[open] {
+    position: absolute;
+    margin: auto;
+    border: 0;
+    background-color: transparent;
+    width: 50vw;
+    height: 30vh;
+    padding: 30px;
+    border: 0;
+    outline: 0;
+}
+
+dialog[open]>form {
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgb(0, 102, 149);
+}
+
+dialog[open]>form>textarea {
+    flex: 5;
+    resize: none;
+    overflow-x: scroll;
+    background-color: rgb(255, 179, 0);
+    border: 1px solid rgb(0, 0, 70);
+    color: rgb(0, 0, 70);
+    padding: 5px;
+    outline: none;
+}
+
+dialog[open]>form>.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}  
+
+dialog[open]>form>.options>* {
+    flex: 3;
+    height: 100%;
+    background-color: rgb(255, 179, 0);
+    border: 1px solid rgb(0, 0, 70);
+    color: rgb(0, 0, 70);
+    padding: 5px;
+    outline: none;
+}
+
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input[type="datetime-local"] {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input[type="datetime-local"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+dialog[open]>form>.options>label {
+    max-width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+dialog[open]>form>button {
+    all:unset;
+    flex: 1;
+    flex-basis: 1rem;
+    font-size: inherit;
+    font-family: inherit;
+    text-align: center;
+    color: rgb(255, 179, 0);
+    background-color: rgb(0, 0, 70);
+    cursor: pointer;
+}

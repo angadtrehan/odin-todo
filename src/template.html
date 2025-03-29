@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinki Brain</title>
+    <script type="module" src="./scripts/index.js"></script>
+</head>
+<body>
+    <!-- banner -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>N</h1>
+            </div>
+        </nav>
+    </header>
+    <!-- side drawer -->
+    <aside>
+        <div class="recents">
+            <h3 class="aside-title">
+                Recents
+            </h3>
+            <ul class="recent-list">
+                <li class="list-item">
+                    <div class="icon" id="life"></div>
+                    <div class="title">Life</div>
+                </li>
+                <li class="list-item">
+                    <div class="icon" id="work"></div>
+                    <div class="title">Work</div>
+                </li>
+            </ul>
+        </div>
+        <div class="projects">
+            <h3 class="aside-title">
+                Projects
+            </h3>
+            <ul class="project-list">
+                <li class="list-item">
+                    <div class="icon" id="life"></div>
+                    <div class="title">Life</div>
+                </li>
+                <li class="list-item">
+                    <div class="icon" id="work"></div>
+                    <div class="title">Work</div>
+                </li>
+                <li class="list-item">
+                    <div class="icon" id="design"></div>
+                    <div class="title">Design</div>
+                </li>
+            </ul>
+        </div>
+        <div class="priorities">
+            <h3 class="aside-title">
+                Priorities
+            </h3>
+            <ul class="project-list">
+                <li class="list-item">
+                    <div class="icon" id="p0"></div>
+                    <div class="title">P0</div>
+                </li>
+                <li class="list-item">
+                    <div class="icon" id="p1"></div>
+                    <div class="title">P1</div>
+                </li>
+                <li class="list-item">
+                    <div class="icon" id="p2"></div>
+                    <div class="title">P2</div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!-- main body -->
+    <div class="todoland">
+        <div class="todo-item">
+            <div class="text">
+                <p>
+                    Give ninki the best life
+                </p>
+                <div class="actions">
+                    <div class="mark-done">
+                        o
+                    </div>
+                    <div class="delete">
+                        x 
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="project">
+                    <div class="icon" id="blue">
+
+                    </div>
+                    <div class="project-name">
+                        Life
+                    </div>
+                </div>
+                <div class="date">
+                    <p>
+                        Everyday
+                    </p>
+                </div>
+                <div class="priority">
+                    <div class="icon" id="0">
+
+                    </div>
+                    <div class="flag-title">
+                        <p>
+                            P0
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="todo-item">
+            <div class="text">
+                <p>
+                    Give ninki the best life
+                </p>
+                <div class="actions">
+                    <div class="mark-done">
+                        o
+                    </div>
+                    <div class="delete">
+                        x 
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="project">
+                    <div class="icon" id="blue">
+
+                    </div>
+                    <div class="project-name">
+                        Life
+                    </div>
+                </div>
+                <div class="date">
+                    <p>
+                        Everyday
+                    </p>
+                </div>
+                <div class="priority">
+                    <div class="icon" id="0">
+
+                    </div>
+                    <div class="flag-title">
+                        <p>
+                            P0
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Button -->
+    <div class="add-button">
+        <h1>+</h1>
+    </div>
+    <!-- Popup -->
+    <dialog>
+        <form action="dialog">
+            <textarea name="task" id="task" required></textarea>
+            <div class="options">
+                <select name="project" id="project">
+                    <option value="Select project..." selected>
+                        Select project...
+                    </option>
+                    <option value="Life">
+                        Life
+                    </option>
+                    <option value="Work">
+                        Work
+                    </option>
+                    <option value="Design">
+                        Design
+                    </option>
+                </select>
+                <label for="checkbox">Everyday
+                    <input type="checkbox" name="everyday" id="everyday"> 
+                </label> 
+                <input type="datetime-local" name="date" id="date">
+                <select name="priority" id="priority">
+                    <option value="Select priority..." selected>
+                        Select priority...
+                    </option>
+                    <option value="p0">
+                        P0
+                    </option>
+                    <option value="p1">
+                        P1
+                    </option>
+                    <option value="p2">
+                        P2
+                    </option>
+                </select>
+            </div>
+            <button type="button">Add Task</button>
+        </form>
+    </dialog>
+</body>
+</html>
